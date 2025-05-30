@@ -14,6 +14,7 @@ config GD32_SELECT
     select HAVE_CHIPID
 #	select HAVE_GPIO_HARD_PWM
     select HAVE_STEPPER_BOTH_EDGE
+    select HAVE_BOOTLOADER_REQUEST
 
 config BOARD_DIRECTORY
     string
@@ -155,6 +156,11 @@ config CLOCK_FREQ
 #config FLASH_START
 #    hex
 #    default 0x08000000
+
+config GD32_DFU_ROM_ADDRESS
+    hex
+    default 0x08000000
+#    default 0x1FFFEC00 if (MACH_GD32E230X6 || MACH_GD32E230X8)
 
 config FLASH_SIZE
     hex
