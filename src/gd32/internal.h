@@ -48,3 +48,7 @@ void gpio_init_output_options_set(uint32_t gpio, uint8_t otype);
 #endif
 
 #endif
+
+// dfu_reboot.c
+void dfu_reboot(void);
+void dfu_reboot_check(void);
