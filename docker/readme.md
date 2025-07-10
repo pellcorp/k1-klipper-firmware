@@ -1,6 +1,6 @@
 # Dockerfile
 
-For building chelper and firmware
+For building chelper and MIPS firmware, best **not** to use it for building anything else.
 
 ## Publishing docker file
 
