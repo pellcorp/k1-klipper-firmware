@@ -4,6 +4,7 @@
 #include "board/irq.h" // irq_disable
 #include "board/misc.h" // bootloader_request
 #include "command.h" // DECL_CONSTANT_STR
+#include "gd32f30x_gpio.h"
 #include "internal.h" // enable_pclock
 #include "sched.h" // sched_main
 
@@ -207,6 +208,12 @@ systemInit(void)
     RCU_CFG1 = 0x00000000U;
 
 	systemClock120mHxtal();
+
+#if CONFIG_GD32F303_DISABLE_SWJ
+    // Creality-compatible mode: disable the full SWJ block.
+    enable_pclock(RCU_AF);
+    AFIO_PCF0 = (AFIO_PCF0 & ~AFIO_PCF0_SWJ_CFG) | PCF0_SWJ_CFG(4);
+#endif
 }
 
 void

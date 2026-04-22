@@ -231,4 +231,12 @@ choice
         select USBSERIAL
 endchoice
 
+config GD32F303_DISABLE_SWJ
+    bool "Disable SWJ at startup (disable JTAG and SWD)"
+    depends on MACH_GD32F303XX
+    help
+        Disable the full SWJ debug block during early startup. This
+        matches Creality's Ender 3 V3 KE GD32 startup behavior and
+        frees PA15, PB3, and PB4 for GPIO use.
+
 endif
