@@ -8,4 +8,4 @@ cp .config.$1 .config
 mkdir -p outfw/
 make clean
 make
-mv out/${1}*.bin outfw/
+mv out/*000.bin outfw/
