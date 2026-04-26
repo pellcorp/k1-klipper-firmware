@@ -9,6 +9,7 @@ rm -rf outfw/
 ./_build.sh noz || exit $?
 ./_build.sh mcu || exit $?
 ./_build.sh ke-mcu || exit $?
+./_build.sh e5m-mcu || exit $?
 ./_build.sh e5m-noz || exit $?
 ./_build.sh e3v3-bed || exit $?
 ./_build.sh e3v3-noz || exit $?
