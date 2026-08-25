@@ -14,3 +14,5 @@ rm -rf outfw/
 ./_build.sh e3v3-bed || exit $?
 ./_build.sh e3v3-noz || exit $?
 ./_build.sh e3v3-mcu || exit $?
+./_build.sh cr10se-noz || exit $?
+./_build.sh cr10se-mcu || exit $?
